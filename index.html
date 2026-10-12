@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171713">
+  <meta name="description" content="Wok & Roll Cafe — fresh wok favourites, rolled with flavour.">
+  <title>Wok & Roll Cafe — Fresh off the wok</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#171713;--paper:#f7f3e9;--red:#ed5735;--lime:#d3ec65;--muted:#77766e;--line:rgba(23,23,19,.16)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(1180px,calc(100% - 48px));margin:auto}
+    .food-emoji-bg{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;opacity:.12}.food-emoji-bg span{position:absolute;font-size:clamp(42px,6vw,78px);filter:grayscale(.35)}.food-emoji-bg span:nth-child(1){top:17%;left:2%;transform:rotate(-16deg)}.food-emoji-bg span:nth-child(2){top:43%;right:2%;transform:rotate(14deg)}.food-emoji-bg span:nth-child(3){top:69%;left:3%;transform:rotate(12deg)}.food-emoji-bg span:nth-child(4){top:86%;right:4%;transform:rotate(-12deg)}header,main,footer,.cart-panel{position:relative;z-index:1}
+    header{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font:700 23px 'Space Grotesk';letter-spacing:-1.3px}.brand span{color:var(--red)}nav{display:flex;align-items:center;gap:34px;font-size:13px;font-weight:600}.nav-cta{background:var(--ink);color:white;padding:13px 19px;border-radius:3px}
+    .hero{padding:70px 0 76px;display:grid;grid-template-columns:1fr .9fr;gap:42px;align-items:center}.eyebrow{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--red)}h1,h2,h3,p{margin-top:0}h1{font:700 clamp(60px,8.4vw,112px)/.91 'Space Grotesk';letter-spacing:-7px;margin:22px 0 24px}.hero p{font-size:17px;line-height:1.7;color:#58574f;max-width:410px}.buttons{display:flex;gap:12px;margin-top:32px}.btn{display:inline-block;padding:15px 21px;background:var(--red);color:white;font-size:13px;font-weight:700;border-radius:3px}.btn.secondary{background:transparent;color:var(--ink);border:1px solid var(--line)}.hero-art{height:465px;position:relative;overflow:hidden;background:#e6d9be;border-radius:3px}.hero-art img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.88)}.sticker{position:absolute;bottom:20px;left:20px;background:var(--lime);width:108px;height:108px;border-radius:50%;display:grid;place-items:center;text-align:center;font:700 15px/1.05 'Space Grotesk';transform:rotate(-12deg)}
+    .ticker{background:var(--lime);padding:16px 0;overflow:hidden;white-space:nowrap;font:700 15px 'Space Grotesk';letter-spacing:1px}.ticker span{padding:0 24px}.ticker b{color:var(--red)}
+    section{padding:84px 0}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:32px}.section-head h2{font:700 clamp(38px,5vw,58px)/1 'Space Grotesk';letter-spacing:-3px;margin:12px 0 0}.section-head p{max-width:300px;color:var(--muted);font-size:14px;line-height:1.6;margin-bottom:0}.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.dish{background:#fffdf7;padding:12px;border:1px solid var(--line)}.dish img{width:100%;height:205px;object-fit:cover;display:block;background:#e9e1d2}.dish-meta{display:flex;justify-content:space-between;align-items:start;padding:18px 6px 10px}.dish h3{font:600 21px 'Space Grotesk';letter-spacing:-.6px;margin:0 0 7px}.dish p{font-size:12px;color:var(--muted);margin:0}.price{font-weight:700;font-size:14px}.menu-note{font-size:11px;color:var(--muted);margin-top:15px}
+    .menu-categories{display:grid;grid-template-columns:1fr 1fr;gap:16px}.menu-category{background:#fffdf7;border:1px solid var(--line);padding:22px 24px}.category-heading{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:11px;margin-bottom:7px}.category-heading h3{font:700 24px 'Space Grotesk';text-transform:uppercase;letter-spacing:-.7px;margin:0}.category-heading span{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}.menu-category.out-of-stock .category-heading span{color:var(--red)}.menu-category.out-of-stock .menu-row{opacity:.55}.menu-row{display:flex;justify-content:space-between;gap:14px;padding:10px 0;font-size:15px}.menu-row.has-order-options strong{display:none}.order-options{grid-column:2;grid-row:1;display:flex;gap:6px}.order-button{display:inline-block;padding:7px 9px;background:var(--red);color:white;border-radius:3px;font-size:10px;font-weight:700;white-space:nowrap}.menu-row.has-order-options{display:grid;grid-template-columns:1fr auto;column-gap:12px;row-gap:7px;align-items:center}.menu-category:last-child{grid-column:1/-1}.order-choice{position:relative}.order-choice summary{list-style:none;cursor:pointer;display:block;padding:7px 9px;background:var(--red);color:white;border-radius:3px;font-size:10px;font-weight:700;white-space:nowrap}.order-choice summary::-webkit-details-marker{display:none}.order-contacts{display:none;position:absolute;right:0;top:calc(100% + 4px);z-index:5;background:#fffdf7;border:1px solid var(--line);padding:8px;gap:7px;box-shadow:0 5px 16px rgba(23,23,19,.16);align-items:center}.order-choice[open] .order-contacts{display:flex}.quantity-choice{display:flex;align-items:center;gap:5px;font-size:11px;font-weight:700;white-space:nowrap}.order-quantity{font:600 12px 'DM Sans';padding:5px 7px;border:1px solid var(--line);border-radius:3px;background:white;color:var(--ink)}.order-contacts a{color:var(--ink);font-size:10px;font-weight:700;white-space:nowrap;padding:6px 7px;background:var(--lime);border-radius:2px}    .add-to-cart{border:0;cursor:pointer;font:700 11px 'DM Sans';white-space:nowrap;padding:8px 10px;background:var(--lime);color:var(--ink);border-radius:3px}.cart-panel{position:fixed;z-index:20;left:50%;bottom:16px;transform:translateX(-50%);width:min(640px,calc(100% - 24px));background:var(--ink);color:white;border-radius:8px;box-shadow:0 10px 35px #17171355;padding:14px 16px;display:none}.cart-panel.visible{display:block}.cart-top{display:flex;justify-content:space-between;align-items:center;gap:12px}.cart-summary{font-weight:700;font-size:14px}.cart-actions{display:flex;gap:8px;align-items:center}.cart-button{border:0;cursor:pointer;border-radius:4px;padding:10px 12px;font:700 12px 'DM Sans'}.cart-send{background:var(--lime);color:var(--ink)}.cart-review{background:#ffffff22;color:white}.cart-items{border-top:1px solid #ffffff33;margin-top:12px;padding-top:8px;display:none;max-height:30vh;overflow:auto}.cart-panel.reviewing .cart-items{display:block}.cart-line{display:flex;justify-content:space-between;gap:10px;padding:7px 0;font-size:13px}.cart-remove{color:var(--lime);background:none;border:0;cursor:pointer;font:600 12px 'DM Sans'}.story{background:var(--ink);color:var(--paper)}.story-inner{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.story h2{font:700 clamp(42px,6vw,70px)/.98 'Space Grotesk';letter-spacing:-4px;margin:14px 0 20px}.story p{color:#c2c0b7;line-height:1.8;max-width:480px}.story-art{height:390px;overflow:hidden}.story-art img{width:100%;height:100%;object-fit:cover}.story .eyebrow{color:var(--lime)}
+    .menu-category-photo{display:block;width:100%;height:150px;object-fit:cover;margin:0 0 16px;border-radius:2px}.menu-category.out-of-stock .menu-category-photo{filter:saturate(.5)}
+    .visit{display:grid;grid-template-columns:1fr 1fr;gap:50px}.visit h2{font:700 54px 'Space Grotesk';letter-spacing:-3px;margin:12px 0}.visit-info{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px}.visit-info h3{font:600 16px 'Space Grotesk';margin-bottom:8px}.visit-info p{font-size:13px;color:var(--muted);line-height:1.6;margin:0}.map{min-height:340px;background:#e8e1d3;display:grid;place-items:center;text-align:center;padding:30px;color:var(--muted);font-size:14px}.map strong{display:block;color:var(--ink);font:600 20px 'Space Grotesk';margin-bottom:8px}
+    footer{background:var(--lime);padding:28px 0}.footer-inner{display:flex;justify-content:space-between;align-items:center;font-size:12px}.footer-brand{font:700 19px 'Space Grotesk';letter-spacing:-1px}
+    @media(max-width:760px){.wrap{width:min(100% - 32px,550px)}header{height:70px}nav{gap:14px}nav a:not(.nav-cta){display:none}.hero{grid-template-columns:1fr;padding:52px 0;gap:28px}h1{letter-spacing:-4px}.hero-art{height:340px}.section-head{display:block}.section-head p{margin-top:16px}.menu-categories{grid-template-columns:1fr}.menu-category:last-child{grid-column:auto}.menu-category{padding:19px}.category-heading h3{font-size:22px}.story-inner,.visit{grid-template-columns:1fr;gap:30px}.story-art{height:300px}.visit-info{gap:18px}.visit h2{font-size:46px}.footer-inner{gap:12px;flex-wrap:wrap}.sticker{width:90px;height:90px;font-size:13px}.cart-panel{bottom:8px;padding:12px}.cart-button{padding:9px 10px;font-size:11px}.cart-summary{font-size:12px}}
+  </style>
+</head>
+<body>
+  <div class="food-emoji-bg" aria-hidden="true"><span>🍜</span><span>🥟</span><span>🍔</span><span>🥤</span></div>
+  <header class="wrap">
+    <a class="brand" href="#home">WOK<span>&</span>ROLL CAFE<span>.</span></a>
+    <nav aria-label="Main navigation"><a href="#menu">Menu</a><a href="#story">Our story</a><a href="#visit">Find us</a><a class="nav-cta" href="#menu">Order on WhatsApp ↗</a></nav>
+  </header>
+  <main>
+    <div class="wrap hero" id="home">
+      <div><div class="eyebrow">Good food. Big wok energy.</div><h1>FRESH<br>OFF THE<br>WOK.</h1><p>Hot, hearty, full of flavour. Your next favourite bowl (or roll) is waiting.</p><div class="buttons"><a class="btn" href="#menu">Explore the menu ↘</a><a class="btn secondary" href="#visit">Come say hi</a></div></div>
+      <div class="hero-art"><img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=1200&q=85" alt="Colourful Asian-inspired meal served fresh"><div class="sticker">WOK<br>THIS<br>WAY!</div></div>
+    </div>
+    <div class="ticker"><span>MADE FRESH <b>✳</b></span><span>BIG FLAVOUR <b>✳</b></span><span>GOOD MOOD FOOD <b>✳</b></span><span>MADE FRESH <b>✳</b></span><span>BIG FLAVOUR <b>✳</b></span></div>
+    <section class="wrap" id="menu"><div class="section-head"><div><div class="eyebrow">Fresh · Tasty · Made with love</div><h2>Our menu.</h2></div><p>Good food, good mood. Choose your favourite and come hungry.</p></div>
+      <div class="menu-categories">
+        <article class="menu-category"><img class="menu-category-photo" src="menu-photos/burger.jpg" alt="Veg burger with fresh vegetables" loading="lazy"><div class="category-heading"><h3>🍔 Burgers</h3><span>Price</span></div><div class="menu-row"><span>Veg Burger</span><strong>₹59</strong></div><div class="menu-row"><span>Cheese Burger</span><strong>₹69</strong></div></article>
+        <article class="menu-category"><img class="menu-category-photo" src="menu-photos/noodles.jpg" alt="Fresh noodles served in a bowl" loading="lazy"><div class="category-heading"><h3>🍜 Noodles</h3><span>Half / Full</span></div><div class="menu-row"><span>Veg Noodles</span><strong>₹59 / ₹109</strong></div><div class="menu-row"><span>Hakka Noodles</span><strong>₹79 / ₹129</strong></div><div class="menu-row"><span>Paneer Noodles</span><strong>₹69 / ₹119</strong></div></article>
+        <article class="menu-category"><img class="menu-category-photo" src="menu-photos/momos.jpg" alt="Steamed veg momos with chutney" loading="lazy"><div class="category-heading"><h3>🥟 Momos</h3><span>Half / Full</span></div><div class="menu-row"><span>Veg Momos</span><strong>₹59 / ₹89</strong></div><div class="menu-row"><span>Paneer Momos</span><strong>₹69 / ₹119</strong></div></article>
+        <article class="menu-category"><img class="menu-category-photo" src="menu-photos/maggi.jpg" alt="Masala Maggi noodles" loading="lazy"><div class="category-heading"><h3>🍝 Maggi</h3><span>Price</span></div><div class="menu-row"><span>Masala Maggi</span><strong>₹59</strong></div><div class="menu-row"><span>Veg Maggi</span><strong>₹69</strong></div><div class="menu-row"><span>Cheese Maggi</span><strong>₹79</strong></div></article>
+        <article class="menu-category"><img class="menu-category-photo" src="menu-photos/cold-coffee.jpg" alt="Iced cold coffee in a glass" loading="lazy"><div class="category-heading"><h3>🥤 Beverages</h3><span>Price</span></div><div class="menu-row"><span>Cold Coffee</span><strong>₹89</strong></div></article>
+      </div>
+    </section>    <section class="story" id="story"><div class="wrap story-inner"><div><div class="eyebrow">A little about us</div><h2>Good food.<br>Good company.</h2><p>At Wok & Roll Cafe, we're here for the quick lunch, the long catch-up and everything in between. Drop by, grab a seat and let us make you something delicious.</p><a class="btn" href="#visit">Meet us here ↘</a></div><div class="story-art"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1100&q=80" alt="Warm, welcoming cafe interior"></div></div></section>
+    <section class="wrap visit" id="visit"><div><div class="eyebrow">Come on over</div><h2>Find your<br>new favourite.</h2><p style="color:var(--muted);line-height:1.7">Visit us in Gaur Yamuna City, Uttar Pradesh. Call, WhatsApp, or email us to place an order.</p><div class="visit-info"><div><h3>Visit</h3><p>Gaur Yamuna City<br>Uttar Pradesh, India</p></div><div><h3>Opening hours</h3><p>Open 7 days a week<br>5:00 PM – 4:00 AM</p></div><div><h3>Call / WhatsApp</h3><p><a href="tel:+918588890401">+91 85888 90401</a><br><a href="tel:+916397928461">+91 63979 28461</a><br><a href="https://wa.me/918588890401">WhatsApp · +91 85888 90401 ↗</a><br></p></div><div><h3>Email</h3><p><a href="mailto:wokrollw@gmail.com">wokrollw@gmail.com ↗</a></p></div><div><h3>Follow along</h3><p><a href="https://instagram.com/wok_.roll" target="_blank" rel="noopener noreferrer">@wok_.roll ↗</a></p></div></div></div><div class="map"><div><strong>Gaur Yamuna City</strong>Uttar Pradesh, India</div></div></section>
+  </main>
+  <footer><div class="wrap footer-inner"><span class="footer-brand">WOK<span style="color:var(--red)">&</span>ROLL CAFE.</span><span>Fresh off the wok, made with love.</span><span>© 2026 Wok & Roll Cafe</span></div></footer>
+  <aside class="cart-panel" id="cart-panel" aria-live="polite" aria-label="Your order"><div class="cart-top"><div class="cart-summary" id="cart-summary"></div><div class="cart-actions"><button class="cart-button cart-review" id="cart-review" type="button">Review</button><button class="cart-button cart-send" id="cart-send" type="button">Send all on WhatsApp ↗</button></div></div><div class="cart-items" id="cart-items"></div></aside>
+  <script>
+    const whatsappNumber = '918588890401';
+    const kolkataToday = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Kolkata', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
+    const momosOutToday = kolkataToday === '2026-10-12';
+    if (momosOutToday) {
+      const momosCategory = [...document.querySelectorAll('.menu-category')].find((category) => category.querySelector('h3')?.textContent.includes('Momos'));
+      if (momosCategory) {
+        momosCategory.classList.add('out-of-stock');
+        momosCategory.querySelector('.category-heading span').textContent = 'Out of stock today';
+      }
+    }
+    const orderCart = new Map();
+    const cartPanel = document.querySelector('#cart-panel');
+    const cartSummary = document.querySelector('#cart-summary');
+    const cartItems = document.querySelector('#cart-items');
+    const formatRupees = (amount) => `₹${amount}`;
+    const updateCart = () => {
+      const entries = [...orderCart.values()];
+      const units = entries.reduce((sum, entry) => sum + entry.quantity, 0);
+      const total = entries.reduce((sum, entry) => sum + entry.price * entry.quantity, 0);
+      cartPanel.classList.toggle('visible', units > 0);
+      cartSummary.textContent = `${units} ${units === 1 ? 'item' : 'items'} · Total ${formatRupees(total)}`;
+      cartItems.replaceChildren();
+      entries.forEach((entry) => {
+        const line = document.createElement('div');
+        line.className = 'cart-line';
+        const text = document.createElement('span');
+        text.textContent = `${entry.name} × ${entry.quantity} · ${formatRupees(entry.price * entry.quantity)}`;
+        const remove = document.createElement('button');
+        remove.className = 'cart-remove';
+        remove.type = 'button';
+        remove.textContent = 'Remove';
+        remove.setAttribute('aria-label', `Remove ${entry.name} from order`);
+        remove.addEventListener('click', () => { orderCart.delete(entry.key); updateCart(); });
+        line.append(text, remove);
+        cartItems.append(line);
+      });
+      if (!entries.length) cartPanel.classList.remove('reviewing');
+    };
+    document.querySelector('#cart-review').addEventListener('click', () => cartPanel.classList.toggle('reviewing'));
+    document.querySelector('#cart-send').addEventListener('click', () => {
+      if (!orderCart.size) return;
+      const entries = [...orderCart.values()];
+      const total = entries.reduce((sum, entry) => sum + entry.price * entry.quantity, 0);
+      const lines = entries.map((entry) => `${entry.name} × ${entry.quantity} = ${formatRupees(entry.price * entry.quantity)}`);
+      const message = `Hi Wok & Roll Cafe! I would like to order:\n${lines.join('\n')}\nTotal: ${formatRupees(total)}`;
+      window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
+    });
+    document.querySelectorAll('.menu-row').forEach((row) => {
+      if (momosOutToday && row.closest('.menu-category')?.classList.contains('out-of-stock')) return;
+      const item = row.querySelector('span').textContent.trim();
+      const priceText = row.querySelector('strong').textContent;
+      const prices = [...priceText.matchAll(/₹\s*(\d+)/g)].map((match) => match[1]);
+      const portions = prices.length > 1 ? ['Half', 'Full'] : [''];
+      const options = document.createElement('div');
+      options.className = 'order-options';
+      row.classList.add('has-order-options');
+      prices.forEach((price, index) => {
+        const portion = portions[index];
+        const choice = document.createElement('details');
+        choice.className = 'order-choice';
+        const summary = document.createElement('summary');
+        summary.textContent = `${portion ? portion + ' · ' : 'Order · '}₹${price}`;
+        choice.append(summary);
+        const contacts = document.createElement('div');
+        contacts.className = 'order-contacts';
+        const quantityLabel = document.createElement('label');
+        quantityLabel.className = 'quantity-choice';
+        quantityLabel.append('Qty');
+        const quantitySelect = document.createElement('select');
+        quantitySelect.className = 'order-quantity';
+        quantitySelect.setAttribute('aria-label', `${item} quantity`);
+        for (let quantity = 1; quantity <= 10; quantity += 1) {
+          const option = document.createElement('option');
+          option.value = String(quantity);
+          option.textContent = String(quantity);
+          quantitySelect.append(option);
+        }
+        quantityLabel.append(quantitySelect);
+        contacts.append(quantityLabel);
+        const addButton = document.createElement('button');
+        addButton.className = 'add-to-cart';
+        addButton.type = 'button';
+        addButton.textContent = 'Add to order';
+        addButton.addEventListener('click', () => {
+          const name = `${item}${portion ? ` (${portion})` : ''}`;
+          const key = `${name}|${price}`;
+          const current = orderCart.get(key);
+          orderCart.set(key, { key, name, price: Number(price), quantity: Math.min(99, (current?.quantity || 0) + Number(quantitySelect.value)) });
+          updateCart();
+          choice.open = false;
+        });
+        contacts.append(addButton);
+        choice.append(contacts);
+        options.append(choice);
+      });
+      row.append(options);
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
