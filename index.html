@@ -108,7 +108,7 @@
       const lines = entries.map((entry) => `${entry.name} × ${entry.quantity} = ${formatRupees(entry.price * entry.quantity)}`);
       const addressLine = skipAddress.checked ? 'Delivery address: Customer will share later on WhatsApp' : `Delivery address: ${deliveryAddress.value.trim()}`;
       const noteLine = orderNotes.value.trim() ? `Order notes: ${orderNotes.value.trim()}\n` : '';
-      const message = `Hi Wok & Roll Cafe! I would like to order:\nName: ${customerName.value.trim()}\n${addressLine}\n${noteLine}\n${lines.join('\n')}\nTotal: ${formatRupees(total)}`;
+      const message = `Hi Wok & Roll Cafe! I would like to order:\nName: ${customerName.value.trim()}\n${addressLine}\n${noteLine}\n${lines.join('\n')}\nTotal: ${formatRupees(total)}\n\nThank you for choosing Wok & Roll Cafe! We appreciate your order.`;
       window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
     });
     document.querySelectorAll('.menu-row').forEach((row) => {
