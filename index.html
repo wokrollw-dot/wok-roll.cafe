@@ -51,7 +51,7 @@
     <section class="wrap visit" id="visit"><div><div class="eyebrow">Come on over</div><h2>Find your<br>new favourite.</h2><p style="color:var(--muted);line-height:1.7">Visit us in Gaur Yamuna City, Uttar Pradesh. Call, WhatsApp, or email us to place an order.</p><div class="visit-info"><div><h3>Visit</h3><p>Gaur Yamuna City<br>Uttar Pradesh, India</p></div><div><h3>Opening hours</h3><p>Open 7 days a week<br>5:00 PM – 4:00 AM</p></div><div><h3>Call / WhatsApp</h3><p><a href="tel:+918588890401">+91 85888 90401</a><br><a href="tel:+916397928461">+91 63979 28461</a><br><a href="https://wa.me/918588890401">WhatsApp · +91 85888 90401 ↗</a><br></p></div><div><h3>Email</h3><p><a href="mailto:wokrollw@gmail.com">wokrollw@gmail.com ↗</a></p></div><div><h3>Follow along</h3><p><a href="https://instagram.com/wok_.roll" target="_blank" rel="noopener noreferrer">@wok_.roll ↗</a></p></div></div></div><div class="map"><div><strong>Gaur Yamuna City</strong>Uttar Pradesh, India</div></div></section>
   </main>
   <footer><div class="wrap footer-inner"><span class="footer-brand">WOK<span style="color:var(--red)">&</span>ROLL CAFE.</span><span>Fresh off the wok, made with love.</span><span>© 2026 Wok & Roll Cafe</span></div></footer>
-  <aside class="cart-panel" id="cart-panel" aria-live="polite" aria-label="Your order"><div class="cart-top"><div class="cart-summary" id="cart-summary"></div><div class="cart-actions"><button class="cart-button cart-review" id="cart-review" type="button">Review</button></div></div><div class="cart-items" id="cart-items"></div><div class="customer-details"><label for="customer-name">Your name <input id="customer-name" name="customer-name" autocomplete="name" placeholder="Enter your name" required></label><label for="delivery-address">Delivery address <textarea id="delivery-address" name="delivery-address" autocomplete="street-address" placeholder="House / flat, street, area, city" required></textarea></label><label class="skip-address"><input id="skip-address" type="checkbox"> Skip address for now</label></div><button class="cart-button cart-send" id="cart-send" type="button">Send order on WhatsApp ↗</button></aside>
+  <aside class="cart-panel" id="cart-panel" aria-live="polite" aria-label="Your order"><div class="cart-top"><div class="cart-summary" id="cart-summary"></div><div class="cart-actions"><button class="cart-button cart-review" id="cart-review" type="button">Review</button></div></div><div class="cart-items" id="cart-items"></div><div class="customer-details"><label for="customer-name">Your name <input id="customer-name" name="customer-name" autocomplete="name" placeholder="Enter your name" required></label><label for="delivery-address">Delivery address <textarea id="delivery-address" name="delivery-address" autocomplete="street-address" placeholder="House / flat, street, area, city" required></textarea></label><label for="order-notes">Order notes / delivery instructions (optional) <textarea id="order-notes" name="order-notes" placeholder="Example: Pet at home, please do not ring the doorbell"></textarea></label><label class="skip-address"><input id="skip-address" type="checkbox"> Skip address for now</label></div><button class="cart-button cart-send" id="cart-send" type="button">Send order on WhatsApp ↗</button></aside>
   <script>
     const whatsappNumber = '918588890401';
     const kolkataToday = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Kolkata', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
@@ -70,6 +70,7 @@
     const customerName = document.querySelector('#customer-name');
     const deliveryAddress = document.querySelector('#delivery-address');
     const skipAddress = document.querySelector('#skip-address');
+    const orderNotes = document.querySelector('#order-notes');
     skipAddress.addEventListener('change', () => { deliveryAddress.disabled = skipAddress.checked; deliveryAddress.required = !skipAddress.checked; if (skipAddress.checked) deliveryAddress.value = ''; });
     const formatRupees = (amount) => `₹${amount}`;
     const updateCart = () => {
@@ -104,7 +105,8 @@
       const total = entries.reduce((sum, entry) => sum + entry.price * entry.quantity, 0);
       const lines = entries.map((entry) => `${entry.name} × ${entry.quantity} = ${formatRupees(entry.price * entry.quantity)}`);
       const addressLine = skipAddress.checked ? 'Delivery address: Customer will share later on WhatsApp' : `Delivery address: ${deliveryAddress.value.trim()}`;
-      const message = `Hi Wok & Roll Cafe! I would like to order:\nName: ${customerName.value.trim()}\n${addressLine}\n\n${lines.join('\n')}\nTotal: ${formatRupees(total)}`;
+      const noteLine = orderNotes.value.trim() ? `Order notes: ${orderNotes.value.trim()}\n` : '';
+      const message = `Hi Wok & Roll Cafe! I would like to order:\nName: ${customerName.value.trim()}\n${addressLine}\n${noteLine}\n${lines.join('\n')}\nTotal: ${formatRupees(total)}`;
       window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
     });
     document.querySelectorAll('.menu-row').forEach((row) => {
