@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#f7f3e9"/>
+  <circle cx="256" cy="230" r="174" fill="#171713"/>
+  <path d="M126 256h260l-30 94a39 39 0 0 1-37 27H193a39 39 0 0 1-37-27z" fill="#ed5735" stroke="#f7f3e9" stroke-width="12" stroke-linejoin="round"/>
+  <path d="M154 257q28-48 55 0t55 0t55 0t55 0" fill="none" stroke="#d3ec65" stroke-width="14" stroke-linecap="round"/>
+  <path d="M202 178c-18-25 17-27 1-52m57 52c-18-25 17-27 1-52m57 52c-18-25 17-27 1-52" fill="none" stroke="#f7f3e9" stroke-width="12" stroke-linecap="round"/>
+  <text x="256" y="436" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="52" fill="#171713">W&amp;R</text>
+</svg>
