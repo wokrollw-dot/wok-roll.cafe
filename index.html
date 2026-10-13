@@ -28,6 +28,8 @@
     @media(max-width:760px){.wrap{width:min(100% - 32px,550px)}header{height:70px}nav{gap:14px}nav a:not(.nav-cta){display:none}.hero{grid-template-columns:1fr;padding:52px 0;gap:28px}h1{letter-spacing:-4px}.hero-art{height:340px}.section-head{display:block}.section-head p{margin-top:16px}.menu-categories{grid-template-columns:1fr}.menu-category:last-child{grid-column:auto}.menu-category{padding:19px}.category-heading h3{font-size:22px}.story-inner,.visit{grid-template-columns:1fr;gap:30px}.story-art{height:300px}.visit-info{gap:18px}.visit h2{font-size:46px}.footer-inner{gap:12px;flex-wrap:wrap}.sticker{width:90px;height:90px;font-size:13px}.cart-panel{bottom:8px;padding:12px}.cart-button{padding:9px 10px;font-size:11px}.cart-summary{font-size:12px}}
     .cart-panel{max-height:min(78vh,680px);overflow:auto}.cart-send{width:100%;margin-top:12px}.cart-items{max-height:24vh}.customer-details{display:grid;gap:9px;margin-top:12px}.customer-details label{display:grid;gap:5px;font-size:11px;font-weight:700}.customer-details input,.customer-details textarea{width:100%;border:1px solid #ffffff44;border-radius:4px;padding:10px;background:#ffffff12;color:white;font:500 13px 'DM Sans'}.customer-details textarea{resize:vertical;min-height:62px}.customer-details .skip-address{display:flex;align-items:center;gap:8px;font-weight:500}.customer-details .skip-address input{width:auto;accent-color:var(--lime)}.customer-details .skip-notes{display:flex;align-items:center;gap:8px;font-weight:500}.customer-details .skip-notes input{width:auto;accent-color:var(--lime)}.customer-details input::placeholder,.customer-details textarea::placeholder{color:#c2c0b7}
 .delivery-zone{padding:10px;border:1px solid #ffffff33;border-radius:4px;margin-top:10px;font-size:11px}.delivery-zone p{margin:0 0 8px;color:#e5e2d9;line-height:1.45}.delivery-zone button{border:0;cursor:pointer;border-radius:4px;padding:8px 10px;background:var(--lime);color:var(--ink);font:700 11px 'DM Sans'}.delivery-zone button:disabled{opacity:.55;cursor:wait}.delivery-zone-status{display:block;margin-top:8px;line-height:1.45}.cart-send:disabled{opacity:.45;cursor:not-allowed}`r`n    .offers-section{padding-top:54px}.offer-card{background:#fffdf7;border:1px solid var(--line);padding:30px;text-align:center}.offer-tag{display:inline-block;padding:8px 12px;background:var(--lime);border-radius:99px;color:var(--ink);font-size:11px;font-weight:700;letter-spacing:.7px;text-transform:uppercase}.offer-card h3{font:700 26px 'Space Grotesk';margin:18px 0 8px}.offer-card p{font-size:14px;color:var(--muted);margin:0 auto 20px;line-height:1.6}.offer-card .btn{margin:0 auto}.offers-section .section-head{margin-bottom:22px}.offers-section .section-head h2{font-size:clamp(34px,4vw,48px)}@media(max-width:760px){nav a.nav-offers{display:inline-flex}nav{gap:8px}.nav-cta{padding:10px 10px;font-size:11px}.brand{font-size:18px}.offer-card{padding:22px}}
+      .cart-panel:not(.reviewing) .delivery-zone,.cart-panel:not(.reviewing) .customer-details,.cart-panel:not(.reviewing) .payment-choice,.cart-panel:not(.reviewing) .cart-send{display:none!important}.cart-panel.reviewing .cart-send{display:block}
+    .payment-choice{border:1px solid #ffffff44;border-radius:4px;padding:10px;margin:10px 0 0;color:white;display:grid;gap:8px;font:500 12px 'DM Sans'} .payment-choice legend{padding:0 5px;font-weight:700}.payment-option{display:flex;align-items:center;gap:8px}.payment-option input{width:auto;accent-color:var(--lime)}.upi-app-options[hidden],.upi-qr-panel[hidden]{display:none!important}.upi-app-options{display:flex;flex-wrap:wrap;gap:7px}.upi-app-options a{display:inline-flex;padding:9px 10px;background:var(--lime);color:var(--ink);border-radius:4px;font-size:11px;font-weight:700}.upi-payment-hint{font-size:11px;color:#c2c0b7;line-height:1.4}.upi-qr-panel{padding:10px;background:white;border-radius:4px;text-align:center;color:var(--ink)}.upi-qr-panel span{font-size:11px;font-weight:700}.upi-qr-panel img,.upi-qr-panel canvas{display:block;margin:8px auto;max-width:100%}
   </style>
 </head>
 <body>
@@ -55,7 +57,8 @@
     <section class="wrap visit" id="visit"><div><div class="eyebrow">Come on over</div><h2>Find your<br>new favourite.</h2><p style="color:var(--muted);line-height:1.7">Visit us in Gaur Yamuna City, Uttar Pradesh. Call, WhatsApp, or email us to place an order.</p><div class="visit-info"><div><h3>Visit</h3><p>Gaur Yamuna City<br>Uttar Pradesh, India</p></div><div><h3>Opening hours</h3><p>Open 7 days a week<br>5:00 PM – 4:00 AM</p></div><div><h3>Call / WhatsApp</h3><p><a href="tel:+918588890401">+91 85888 90401</a><br><a href="tel:+916397928461">+91 63979 28461</a><br><a href="https://wa.me/918588890401">WhatsApp · +91 85888 90401 ↗</a><br></p></div><div><h3>Email</h3><p><a href="mailto:wokrollw@gmail.com">wokrollw@gmail.com ↗</a></p></div><div><h3>Follow along</h3><p><a href="https://instagram.com/wok_.roll" target="_blank" rel="noopener noreferrer">@wok_.roll ↗</a></p></div></div></div><div class="map"><div><strong>Gaur Yamuna City</strong>Uttar Pradesh, India</div></div></section>
   </main>
   <footer><div class="wrap footer-inner"><span class="footer-brand">WOK<span style="color:var(--red)">&</span>ROLL CAFE.</span><span>Fresh off the wok, made with love.</span><span>© 2026 Wok & Roll Cafe</span></div></footer>
-  <aside class="cart-panel" id="cart-panel" aria-live="polite" aria-label="Your order"><div class="cart-top"><div class="cart-summary" id="cart-summary"></div><div class="cart-actions"><button class="cart-button cart-review" id="cart-review" type="button">Review</button></div></div><div class="cart-items" id="cart-items"></div><div class="delivery-zone"><p>Delivery is available within 5 km of the cafe. Check the location of your delivery address to continue. Your location is checked on this device and is not sent with your order.</p><button id="check-delivery-area" type="button">Check delivery area</button><span class="delivery-zone-status" id="delivery-zone-status" aria-live="polite"></span></div><div class="customer-details"><label for="customer-name">Your name <input id="customer-name" name="customer-name" autocomplete="name" placeholder="Enter your name" required></label><label for="delivery-address">Delivery address <textarea id="delivery-address" name="delivery-address" autocomplete="street-address" placeholder="House / flat, street, area, city" required></textarea></label><label for="order-notes">Order notes / delivery instructions (optional) <textarea id="order-notes" name="order-notes" placeholder="Example: Pet at home, please do not ring the doorbell"></textarea></label><label class="skip-notes"><input id="skip-notes" type="checkbox"> Skip order notes</label><label class="skip-address"><input id="skip-address" type="checkbox"> Skip address for now</label></div><button class="cart-button cart-send" id="cart-send" type="button">Send order on WhatsApp ↗</button></aside>
+  <aside class="cart-panel" id="cart-panel" aria-live="polite" aria-label="Your order"><div class="cart-top"><div class="cart-summary" id="cart-summary"></div><div class="cart-actions"><button class="cart-button cart-review" id="cart-review" type="button">Review</button></div></div><div class="cart-items" id="cart-items"></div><div class="delivery-zone"><p>Delivery is available within 5 km of the cafe. Allow location access to check the area. If you continue to WhatsApp, your checked location map link will be included with your order.</p><button id="check-delivery-area" type="button">Check delivery area</button><span class="delivery-zone-status" id="delivery-zone-status" aria-live="polite"></span></div><div class="customer-details"><label for="customer-name">Your name <input id="customer-name" name="customer-name" autocomplete="name" placeholder="Enter your name" required></label><label for="delivery-address">Delivery address <textarea id="delivery-address" name="delivery-address" autocomplete="street-address" placeholder="House / flat, street, area, city" required></textarea></label><label for="order-notes">Order notes / delivery instructions (optional) <textarea id="order-notes" name="order-notes" placeholder="Example: Pet at home, please do not ring the doorbell"></textarea></label><label class="skip-notes"><input id="skip-notes" type="checkbox"> Skip order notes</label><label class="skip-address"><input id="skip-address" type="checkbox"> Skip address for now</label></div><fieldset class="payment-choice"><legend>Payment method</legend><label class="payment-option"><input type="radio" name="payment-method" value="cash" checked> Cash on delivery</label><label class="payment-option"><input type="radio" name="payment-method" value="online"> Online payment (UPI)</label><div class="upi-app-options" id="upi-app-options" hidden><a id="upi-any-app" href="#">Any UPI app</a><a id="upi-gpay" href="#">Google Pay</a><a id="upi-phonepe" href="#">PhonePe</a><a id="upi-paytm" href="#">Paytm</a></div><div id="upi-qr-panel" class="upi-qr-panel" hidden><span>Or scan this QR with any UPI app</span><div id="upi-qr" aria-label="UPI payment QR code"></div></div><small class="upi-payment-hint">After paying, tap “Continue to WhatsApp” to send your order. The cafe will confirm payment.</small></fieldset><button class="cart-button cart-send" id="cart-send" type="button">Continue to WhatsApp ↗</button></aside>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <script>
     const whatsappNumber = '918588890401';
     const kolkataToday = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Kolkata', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
@@ -80,6 +83,7 @@
     const zoneStatus = document.querySelector('#delivery-zone-status');
     const cafeLatitude = 28.309304;
     const cafeLongitude = 77.558477;
+    let customerLocation = null;
     cartSend.disabled = true;
     const distanceKm = (latitude, longitude) => {
       const radians = (degrees) => degrees * Math.PI / 180;
@@ -98,15 +102,18 @@
       navigator.geolocation.getCurrentPosition(({ coords }) => {
         const distance = distanceKm(coords.latitude, coords.longitude);
         if (distance <= 5) {
+          customerLocation = { latitude: coords.latitude, longitude: coords.longitude };
           cartSend.disabled = false;
           zoneStatus.textContent = 'Good news — your delivery address is within our 5 km delivery area.';
           zoneCheck.textContent = 'Check again';
         } else {
+          customerLocation = null;
           cartSend.disabled = true;
           zoneStatus.textContent = 'Sorry, this location is outside our 5 km delivery area.';
         }
         zoneCheck.disabled = false;
       }, (error) => {
+        customerLocation = null;
         cartSend.disabled = true;
         zoneStatus.textContent = error.code === 1 ? 'Please allow location access to check if we can deliver to you.' : 'Could not check your location. Please try again and allow location access.';
         zoneCheck.disabled = false;
@@ -116,10 +123,29 @@
     skipNotes.addEventListener('change', () => { orderNotes.disabled = skipNotes.checked; if (skipNotes.checked) orderNotes.value = ''; });
     skipAddress.addEventListener('change', () => { deliveryAddress.disabled = skipAddress.checked; deliveryAddress.required = !skipAddress.checked; if (skipAddress.checked) deliveryAddress.value = ''; });
     const formatRupees = (amount) => `₹${amount}`;
+    const upiId = 'Q428072111@ybl';
+    const upiOptions = document.querySelector('#upi-app-options');
+    const upiQrPanel = document.querySelector('#upi-qr-panel');
+    const upiQr = document.querySelector('#upi-qr');
+    const upiLinks = { any: document.querySelector('#upi-any-app'), gpay: document.querySelector('#upi-gpay'), phonepe: document.querySelector('#upi-phonepe'), paytm: document.querySelector('#upi-paytm') };
+    const refreshUpi = (total) => {
+      const online = document.querySelector('input[name="payment-method"]:checked').value === 'online';
+      upiOptions.hidden = !online || total <= 0;
+      upiQrPanel.hidden = !online || total <= 0;
+      const params = new URLSearchParams({ pa: upiId, pn: 'Wok & Roll Cafe', am: total.toFixed(2), cu: 'INR', tn: 'Cafe order' }).toString();
+      upiLinks.any.href = `upi://pay?${params}`;
+      upiLinks.gpay.href = `tez://upi/pay?${params}`;
+      upiLinks.phonepe.href = `phonepe://pay?${params}`;
+      upiLinks.paytm.href = `paytmmp://pay?${params}`;
+      upiQr.replaceChildren();
+      if (online && total > 0 && typeof QRCode === 'function') new QRCode(upiQr, { text: `upi://pay?${params}`, width: 190, height: 190, correctLevel: QRCode.CorrectLevel.M });
+      else if (online && total > 0) upiQrPanel.hidden = true;
+    };
     const updateCart = () => {
       const entries = [...orderCart.values()];
       const units = entries.reduce((sum, entry) => sum + entry.quantity, 0);
       const total = entries.reduce((sum, entry) => sum + entry.price * entry.quantity, 0);
+      refreshUpi(total);
       cartPanel.classList.toggle('visible', units > 0);
       cartSummary.textContent = `${units} ${units === 1 ? 'item' : 'items'} · Total ${formatRupees(total)}`;
       cartItems.replaceChildren();
@@ -139,7 +165,8 @@
       });
       if (!entries.length) cartPanel.classList.remove('reviewing');
     };
-    document.querySelector('#cart-review').addEventListener('click', () => cartPanel.classList.toggle('reviewing'));
+    document.querySelectorAll('input[name="payment-method"]').forEach((input) => input.addEventListener('change', () => refreshUpi([...orderCart.values()].reduce((sum, entry) => sum + entry.price * entry.quantity, 0))));
+    document.querySelector('#cart-review').addEventListener('click', (event) => { cartPanel.classList.toggle('reviewing'); event.currentTarget.textContent = cartPanel.classList.contains('reviewing') ? 'Back to menu' : 'Review / Checkout'; });
     document.querySelector('#cart-send').addEventListener('click', () => {
       if (!orderCart.size) return;
       if (!customerName.reportValidity()) return;
@@ -148,8 +175,11 @@
       const total = entries.reduce((sum, entry) => sum + entry.price * entry.quantity, 0);
       const lines = entries.map((entry) => `${entry.name} × ${entry.quantity} = ${formatRupees(entry.price * entry.quantity)}`);
       const addressLine = skipAddress.checked ? 'Delivery address: Customer will share later on WhatsApp' : `Delivery address: ${deliveryAddress.value.trim()}`;
+      const locationLine = customerLocation ? `Customer location: https://maps.google.com/?q=${customerLocation.latitude},${customerLocation.longitude}\n` : '';
       const noteLine = orderNotes.value.trim() ? `Order notes: ${orderNotes.value.trim()}\n` : '';
-      const message = `Hi Wok & Roll Cafe! I would like to order:\nName: ${customerName.value.trim()}\n${addressLine}\n${noteLine}\n${lines.join('\n')}\nTotal: ${formatRupees(total)}\n\nThank you for choosing Wok & Roll Cafe! We appreciate your order.`;
+      const paymentChoice = document.querySelector('input[name="payment-method"]:checked').value;
+      const paymentLine = paymentChoice === 'online' ? 'Payment: Online UPI selected (payment to be confirmed by cafe)' : 'Payment: Cash on delivery';
+      const message = `Hi Wok & Roll Cafe! I would like to order:\nName: ${customerName.value.trim()}\n${addressLine}\n${locationLine}${noteLine}${paymentLine}\n${lines.join('\n')}\nTotal: ${formatRupees(total)}\n\nThank you for choosing Wok & Roll Cafe! We appreciate your order.`;
       window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
     });
     document.querySelectorAll('.menu-row').forEach((row) => {
@@ -194,6 +224,8 @@
           const current = orderCart.get(key);
           orderCart.set(key, { key, name, price: Number(price), quantity: Math.min(99, (current?.quantity || 0) + Number(quantitySelect.value)) });
           updateCart();
+          cartPanel.classList.remove('reviewing');
+          document.querySelector('#cart-review').textContent = 'Review / Checkout';
           choice.open = false;
         });
         contacts.append(addButton);
