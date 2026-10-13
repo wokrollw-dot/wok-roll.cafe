@@ -90,7 +90,7 @@
   <script>
     const whatsappNumber = '918588890401'; const todayOffer=document.querySelector('#today-offer'); const offerStart=new Date(todayOffer.dataset.start); const offerEnd=new Date(todayOffer.dataset.end); const offerIsActive=()=>{const t=new Date();return t>=offerStart&&t<offerEnd;}; const updateOfferDisplay=()=>{if(offerIsActive()){document.querySelector('#offer-tag').textContent='✨ Offer live now · Until 4 AM';document.querySelector('#offer-title').textContent="Tonight's special offers are live!";}else if(new Date()>=offerEnd){document.querySelector('#offer-tag').textContent='✨ Wok & Roll Cafe';document.querySelector('#offer-title').textContent='No active offers right now';document.querySelector('#offer-copy').textContent="Tonight's offer has ended. Check back soon for the next deal.";document.querySelector('#offer-order').textContent='Ask about future offers ↗';document.querySelector('#offer-order').href='https://wa.me/918588890401?text=Hi%20Wok%20%26%20Roll%20Cafe%2C%20what%20offers%20are%20available%20today%3F';}}; updateOfferDisplay(); window.setInterval(updateOfferDisplay,30000);
     const kolkataToday = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Kolkata', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
-    const momosOutToday = kolkataToday === '2026-10-13';
+    const momosOutToday = kolkataToday === '2026-10-14';
     if (momosOutToday) {
       const momosCategory = [...document.querySelectorAll('.menu-category')].find((category) => category.querySelector('h3')?.textContent.includes('Momos'));
       if (momosCategory) {
@@ -98,7 +98,7 @@
         momosCategory.querySelector('.category-heading span').textContent = 'Out of stock today';
       }
     }
-    const orderCart = new Map();
+    const coldCoffeeCategory = [...document.querySelectorAll('.menu-category')].find((category) => category.querySelector('h3')?.textContent.includes('Beverages')); if (momosOutToday && coldCoffeeCategory) { coldCoffeeCategory.classList.add('out-of-stock'); coldCoffeeCategory.querySelector('.category-heading span').textContent = 'Out of stock today'; } const orderCart = new Map();
     const cartPanel = document.querySelector('#cart-panel');
     const cartSummary = document.querySelector('#cart-summary');
     const cartItems = document.querySelector('#cart-items');
