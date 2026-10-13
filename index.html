@@ -207,7 +207,7 @@
       const noteLine = orderNotes.value.trim() ? `Order notes: ${orderNotes.value.trim()}\n` : '';
       const paymentChoice = document.querySelector('input[name="payment-method"]:checked').value;
       const paymentLine = paymentChoice === 'online' ? 'Payment: Online UPI selected (payment to be confirmed by cafe)' : 'Payment: Cash on delivery';
-      const message = `Hi Wok & Roll Cafe! I would like to order:\nName: ${customerName.value.trim()}\n${addressLine}\n${locationLine}${noteLine}${paymentLine}\n${lines.join('\n')}\nTotal: ${formatRupees(total)}\n\nThank you for choosing Wok & Roll Cafe! We appreciate your order.`;
+      const message = `Hi Wok & Roll Cafe! I would like to order:\nName: ${customerName.value.trim()}\n${addressLine}\n${locationLine}${noteLine}${paymentLine}\n${lines.join('\n')}\nTotal: ${formatRupees(total)}\n\n`;
       window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
     });
     document.querySelectorAll('.menu-row').forEach((row) => {
