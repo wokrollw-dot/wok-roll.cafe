@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://wokrollw-dot.github.io/wok-roll.cafe/sitemap.xml
